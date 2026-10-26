@@ -4,7 +4,7 @@
 class Funcionario:
     def __init__(self, nome, salario):
         self.nome = nome
-        self.salario = salario
+        self.__salario = salario
 #privado: dois sublinhados
     def apresentar(self):
         print(f"Sou {self.nome} e ganho R${self.salario}")
@@ -28,9 +28,9 @@ print(ana.salario)
 ana.apresentar()
 ana.dar_aumento(-20)
 ana.apresentar()
-#
-ana.salario = 5000
+#ana.salario = 5000
 ana.apresentar()
+
 try:
     ana.salario =10000
 except AttributeError:
